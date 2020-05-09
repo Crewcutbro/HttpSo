@@ -2,31 +2,34 @@ package com.ss.sys.ces;
 
 import android.content.Context;
 
-/**
- * @author heyaug
- */
 public final class a {
     static {
+        String str = "cms";
         try {
-            System.loadLibrary("cms");
-        } catch (UnsatisfiedLinkError ignored) {
+            System.loadLibrary(str);
+        } catch (UnsatisfiedLinkError e) {
+            e.getMessage();
         }
+    }
+    public static byte[] sMetaData;
+
+    static {
     }
 
     public a() {
         super();
     }
 
-    private static void Bill() {
+    private static final void Bill() {
     }
 
     public final strictfp void Francies() {
     }
 
-    public static void Louis() {
+    public static final void Louis() {
     }
 
-    public static void Zeoy() {
+    public static final void Zeoy() {
     }
 
     public static native byte[] decode(int arg0, byte[] arg1);

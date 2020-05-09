@@ -1,10 +1,8 @@
 package com.ss.a.b;
 
-/**
- * @author heyaug
- */
 public final class a {
-    public static String a(byte[] arg6) {
+
+    public static String ab(byte[] arg6) {
         if (arg6 == null) {
             return null;
         }
@@ -22,37 +20,15 @@ public final class a {
         return new String(v1);
     }
 
-    public static byte[] a(String arg7) {
+    public static byte[] ac(String arg7) {
         int v0 = arg7.length();
         byte[] v1 = new byte[v0 / 2];
         int v2;
         for (v2 = 0; v2 < v0; v2 += 2) {
             v1[v2 / 2] = ((byte) ((Character.digit(arg7.charAt(v2), 16) << 4) + Character.digit(arg7.charAt(v2 + 1), 16)));
         }
-        return v1;
-    }
 
-    public static byte[] a(byte[][] arg8) {
-        int v1 = 0;
-        int v2 = 0;
-        int v3 = 2;
-        while (true) {
-            if (v1 >= v3) {
-                break;
-            }
-            v2 += arg8[v1].length;
-            ++v1;
-        }
-        byte[] v1_1 = new byte[v2];
-        v2 = 0;
-        int v4 = 0;
-        while (v2 < v3) {
-            byte[] v5 = arg8[v2];
-            System.arraycopy(v5, 0, v1_1, v4, v5.length);
-            v4 += v5.length;
-            ++v2;
-        }
-        return v1_1;
+        return v1;
     }
 }
 

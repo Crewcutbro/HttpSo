@@ -41,8 +41,21 @@ public class gorgon {
                 return v2.substring(v3 + 10);
             }
         }
-
         return null;
+    }
+
+    public static String getGorgon(String url) {
+        String urlParams = getUrlParams(url);
+        String URL = encryptData(urlParams);
+        long rticket = System.currentTimeMillis();
+        if (url.contains("rticket")) {
+            rticket = Long.parseLong(getTime(url));
+        }
+        int ks = Integer.parseInt(Long.toString(rticket / 1000));
+        String X_SS_STUB = "00000000000000000000000000000000";
+        String COOKIE = "00000000000000000000000000000000";
+        String SESSION_ID = "00000000000000000000000000000000";
+        return com.ss.a.b.a.ab(com.ss.sys.ces.a.leviathan(-1, ks, com.ss.a.b.a.ac(URL + X_SS_STUB + COOKIE + SESSION_ID)));
     }
 
 
@@ -75,18 +88,16 @@ public class gorgon {
         if (URL == null || URL.length() <= 0) {
             URL = "00000000000000000000000000000000";
         }
-
         if (X_SS_STUB == null || X_SS_STUB.length() <= 0) {
             X_SS_STUB = "00000000000000000000000000000000";
         }
-
         if (COOKIE == null || COOKIE.length() <= 0) {
             COOKIE = "00000000000000000000000000000000";
         }
         if (SESSION_ID == null || SESSION_ID.length() <= 0) {
             SESSION_ID = "00000000000000000000000000000000";
         }
-        return com.ss.a.b.a.a(com.ss.sys.ces.a.leviathan(1, ks, com.ss.a.b.a.a(URL + X_SS_STUB + COOKIE + SESSION_ID)));
+        return com.ss.a.b.a.ab(com.ss.sys.ces.a.leviathan(-1, ks, com.ss.a.b.a.ac(URL + X_SS_STUB + COOKIE + SESSION_ID)));
     }
 
     private static String getTime(String url) {
@@ -137,4 +148,3 @@ public class gorgon {
         throw new NullPointerException("bytes is null");
     }
 }
-

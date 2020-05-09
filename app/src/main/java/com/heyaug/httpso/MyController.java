@@ -49,6 +49,12 @@ public class MyController {
     }
 
     @ResponseBody
+    @PostMapping("/url")
+    String getNewGogonUrl(@RequestBody String body) {
+        return gorgon.getGorgon(body);
+    }
+
+    @ResponseBody
     @PostMapping("/decode")
     String mPai(@RequestBody String body) {
         try {
