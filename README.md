@@ -1,5 +1,7 @@
 ## AndServer+Service 打造 Android 服务器调用 so 文件
-#### 参考：https://mp.weixin.qq.com/s/Do4rGrMNFGx5HqFKM9vA1g、https://github.com/NightTeam/HttpSo 
+#### 参考：
+##### https://mp.weixin.qq.com/s/Do4rGrMNFGx5HqFKM9vA1g
+##### https://github.com/NightTeam/HttpSo 
 ##### 实现调用抖音libcms.so和秒拍的libte.so
 ---
 
