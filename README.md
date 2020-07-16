@@ -2,12 +2,10 @@
 #### 参考：
 ##### https://mp.weixin.qq.com/s/Do4rGrMNFGx5HqFKM9vA1g
 ##### https://github.com/NightTeam/HttpSo 
-##### 实现调用抖音libcms.so和秒拍的libte.so
 ---
 
 #### 调用秒拍7.2.70 libte.so的Decode方法解密response
 #### 调用11.8.0抖音libcms.so生成0404开头x-gorgon
-
 
 ##### 抖音
 ```python
