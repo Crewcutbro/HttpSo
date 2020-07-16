@@ -12,7 +12,7 @@ import java.net.UnknownHostException;
 
 public class MyService extends Service {
     private static final String TAG = "NigthTeam";
-
+    public static int default_port=8888;
     @Override
     public void onCreate() {
         super.onCreate();
@@ -25,7 +25,7 @@ public class MyService extends Service {
                 try {
                     inetAddress = InetAddress.getByName("0.0.0.0");
                     Log.d(TAG, "onCreate: " + inetAddress.getHostAddress());
-                    ServerManager serverManager = new ServerManager(getApplicationContext(), inetAddress, 8888);
+                    ServerManager serverManager = new ServerManager(getApplicationContext(), inetAddress, default_port);
                     serverManager.startServer();
                 } catch (UnknownHostException e) {
                     e.printStackTrace();
